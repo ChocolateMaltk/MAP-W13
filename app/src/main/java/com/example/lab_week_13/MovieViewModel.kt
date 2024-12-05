@@ -1,10 +1,8 @@
-package com.example.lab_week_12
+package com.example.lab_week_13
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.lab_week_12.model.Movie
-import kotlinx.coroutines.CoroutineDispatcher
+import com.example.lab_week_13.model.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

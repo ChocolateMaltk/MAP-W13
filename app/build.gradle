@@ -1,15 +1,21 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply plugin: 'kotlin-kapt'
+kapt {
+    correctErrorTypes = true
 }
 
 android {
-    namespace "com.example.lab_week_12"
+    namespace "com.example.lab_week_13"
 
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.lab_week_12"
+        applicationId "com.example.lab_week_13"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -23,6 +29,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    buildFeatures {
+        dataBinding true
     }
 
     compileOptions {
@@ -56,6 +66,12 @@ dependencies {
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    implementation 'androidx.room:room-runtime:2.4.3'
+    implementation 'androidx.room:room-ktx:2.4.3'
+    kapt 'androidx.room:room-compiler:2.4.3'
+
+    implementation 'androidx.work:work-runtime:2.7.1'
 
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
